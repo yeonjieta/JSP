@@ -37,8 +37,7 @@ public class BoardDAO {
 	
 	public List<BoardDTO> select(){
 		ArrayList<BoardDTO> list = new ArrayList<BoardDTO>();
-		String sql = ""
-		
+	
 //		String sql = "	select m.userid, b.* from board b" + "	join member m" + "	on m.idx = b.writer";
 //
 //		String like = "	and %s like '%%' || ? || '%%' ";
