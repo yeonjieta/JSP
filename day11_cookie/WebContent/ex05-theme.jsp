@@ -53,8 +53,10 @@
 <%
 		if(request.getMethod().equals("POST")){
 			String theme = request.getParameter("theme");
+			// <select name="theme">
 			theme = URLEncoder.encode(theme,"UTF-8");
 			Cookie c = new Cookie("theme", theme);
+			// <select name="theme"> 값 유지 위해 쿠키 생성
 			c.setMaxAge(60 * 5);
 			response.addCookie(c);
 			response.sendRedirect("ex05-theme.jsp");

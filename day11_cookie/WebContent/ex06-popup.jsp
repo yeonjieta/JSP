@@ -30,6 +30,7 @@
 <%
 		if(request.getMethod().equals("POST")){
 			String donotPopup = request.getParameter("donotPopup");
+			// request.getParameter를 이용해 donotPopup 값을 가져옴 
 			if(donotPopup != null){
 				Cookie c = new Cookie("donotPopup", donotPopup);
 												// 이름은 중요하지만 값은 중요하지 않다.

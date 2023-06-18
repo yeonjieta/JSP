@@ -20,8 +20,9 @@
 		response.addCookie(c1);							// 클라이언트에게 보낼 응답에 쿠키를 같이 보냄, response에 적재
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+		// 날짜와 시간을 원하는 형식으로 변환
 		Date date = new Date();							// 현재 날짜와 시간을 문자열로 생성
-		String lastAccessedTime = sdf.format(date);			
+		String lastAccessedTime = sdf.format(date);			// 포맷팅된 현재 날짜와 시간이 저장
 		
 		// 띄워쓰기 및 기호는 쿠키 내용으로 사용할 수 없기 때문에 인코딩을 진행한다.
 		lastAccessedTime = URLEncoder.encode(lastAccessedTime, "UTF-8");
@@ -34,7 +35,7 @@
 		// 쿠키는 클라이언트가 보관하다가, 다음번 요청에 같이 포함되어서 서버로 넘어온다.
 		// 따라서, 쿠키를 방금 보낸 시점에서는 쿠키를 확인할 수 없고, 보통 리다이렉트를 이용하여 주소를 갱신시킨다.
 		
-		// 다음번 올 때 이쪽으로 넘김, 처음에 10개 저자하고 바로 쿠폰써주세요 안됨, 담 번에 올 때 사용가능 느낌
+		// 다음번 올 때 이쪽으로 넘김, 처음에 10개 저장하고 바로 쿠폰써주세요 안됨, 담 번에 올 때 사용가능 느낌
 		response.sendRedirect("ex02_cookie_check.jsp");
 %>
 
