@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>day21</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!--  작성한 서블릿 클래스를 등록한다, test1 : class를 식별하는 가상의 별명-->
+	 <servlet>
+	 		<servlet-name>test1</servlet-name>                 
+			<servlet-class>ex01.Test1</servlet-class>
+	 </servlet>
+	 		
+	 <!--  등록된 서블릿 클래스에 연결할 주소를 맵핑하여 등록한다 -->		
+	 <servlet-mapping>
+	 		<servlet-name>test1</servlet-name>
+	 		<url-pattern>/test1 </url-pattern>
+	 </servlet-mapping>
+	 
+	 <servlet>
+		 	<servlet-name>test2</servlet-name>             <!--이름  -->      
+			<servlet-class>ex01.Test2</servlet-class>     <!--클래스위치  -->
+	 </servlet>
+	 
+	  <servlet-mapping>
+	 		<servlet-name>test2</servlet-name>				 <!-- 위와 같은 이름 -->
+	 		<url-pattern>/test2 </url-pattern>     <!-- 서블릿 실행 위한 주소 (임의로 지정)      test2가 언제 실행되느냐, /test2의 주소로 넘어왔을 때 실행된다. -->
+	 </servlet-mapping>
+	 
+
+ <servlet>
+	 		<servlet-name>test3</servlet-name>                 
+			<servlet-class>ex01.Test3</servlet-class>
+	 </servlet>
+	 		
+	 <servlet-mapping>
+	 		<servlet-name>test3</servlet-name>
+	 		<url-pattern>/test3 </url-pattern>
+	 </servlet-mapping>
+
+</web-app>
